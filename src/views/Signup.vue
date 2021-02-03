@@ -5,8 +5,7 @@
       <div class="uk-container uk-container-expand">
         <div class="uk-grid" data-uk-height-viewport="expand: true">
           <div
-            class="uk-width-3-5@m uk-background-cover uk-background-center-right uk-visible@m uk-box-shadow-xlarge"
-            style="background-image: url(img/in-signin-image.jpg)"
+            class="uk-width-3-5@m uk-background-cover uk-background-center-right uk-visible@m uk-box-shadow-xlarge login-img"
           ></div>
           <div class="uk-width-expand@m uk-flex uk-flex-middle">
             <div class="uk-grid uk-flex-center">

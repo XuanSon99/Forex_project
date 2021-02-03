@@ -13,6 +13,11 @@ import './assets/css/style.css'
 import './assets/css/custom.css'
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+Vue.use(Vuetify);
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import './assets/js/vendors/indonez.min.js'
 // import './assets/js/config-theme.js'
 Vue.use(Toast, {
@@ -29,6 +34,10 @@ Vue.prototype.$headers = {
     "Authorization": localStorage.getItem("token"),
   },
 };
+Vue.prototype.$checkLogin = false;
+if(localStorage.getItem("token")) {
+  Vue.prototype.$checkLogin = true;
+}
 Vue.prototype.CallAPI = function (method, url, data, callResponse, callError) {
   switch (method) {
     case "post":
@@ -62,5 +71,6 @@ new Vue({
   router,
   bootstrap,
   axios,
+  vuetify: new Vuetify(),
   render: h => h(App)
 }).$mount('#app')

@@ -14,7 +14,10 @@
                       JSC MARKETS - First-Class STP Broker.
                     </h1>
                     <p class="uk-text-lead uk-visible@m">
-                      JSC Markets was founded by a group of experienced business executives from the forex, finance, commercial and compliance sectors who were determined to offer a fairer way to trade forex.
+                      JSC Markets was founded by a group of experienced business
+                      executives from the forex, finance, commercial and
+                      compliance sectors who were determined to offer a fairer
+                      way to trade forex.
                     </p>
                     <div class="in-slideshow-button">
                       <a
@@ -38,7 +41,7 @@
                 <div class="uk-position-center">
                   <img
                     class="uk-animation-slide-top-small"
-                    src="../assets/img/in-slideshow-image-1.png"
+                    src="../assets/img/slide-img/in-slideshow-image-1.png"
                     alt="slideshow-image"
                     width="862"
                     height="540"
@@ -82,7 +85,7 @@
                 <div class="uk-position-center">
                   <img
                     class="uk-animation-slide-top-small"
-                    src="../assets/img/in-slideshow-image-2.png"
+                    src="../assets/img/slide-img/in-slideshow-image-2.png"
                     alt="slideshow-image"
                     width="862"
                     height="540"
@@ -115,7 +118,9 @@
                     ></i>
                   </div>
                   <div>
-                    <p class="uk-text-bold uk-margin-remove">Fast order Execution</p>
+                    <p class="uk-text-bold uk-margin-remove">
+                      Fast order Execution
+                    </p>
                   </div>
                 </div>
                 <div class="uk-flex uk-flex-middle">
@@ -236,92 +241,35 @@
       <div class="uk-container">
         <div class="uk-grid uk-flex uk-flex-center">
           <div class="uk-width-1-2@m uk-text-center">
-            <h2>Experience more than Trading.</h2>
+            <h2>COMPETIVE PRICE WITH THOUSAND OF INSTRUMENTS</h2>
             <p class="uk-text-lead">
-              Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-              esse nihil molestiae consequatu vel illum qui dolorem.
+              Low trading cost, low commission, competitive spreads and low
+              margin.
             </p>
-            <i class="fas fa-chevron-down uk-text-primary"></i>
           </div>
           <div class="uk-width-5-6@m">
             <div
               class="uk-child-width-1-2@s uk-child-width-1-2@m uk-margin-medium-top"
               data-uk-grid
             >
-              <div>
-                <div class="in-pricing-1">
-                  <div class="uk-card uk-card-default uk-box-shadow-medium">
-                    <div class="uk-card-media-top">
-                      <img
-                        class="uk-width-1-1 uk-align-center"
-                        src="../assets/img/in-profit-content-1.jpg"
-                        data-width
-                        data-height
-                        alt="sample-image"
-                      />
-                      <span></span>
-                    </div>
-                    <div class="uk-card-body">
-                      <div class="in-heading-extra in-card-decor-1">
-                        <h2 class="uk-margin-remove-bottom">Economic</h2>
-                        <p class="uk-text-lead">Analysis</p>
-                      </div>
-                      <p class="uk-margin-small-top">
-                        Stay ahead of the markets with world-leading market
-                        analysis through daily webinars by industry experts.
-                      </p>
-                      <div class="uk-margin-medium-top">
-                        <a
-                          class="uk-button uk-button-link uk-text-uppercase uk-text-small"
-                          href="#"
-                          >Read analysis<i
-                            class="fas fa-caret-square-right uk-margin-small-left"
-                          ></i
-                        ></a>
-                        <span class="uk-label uk-border-pill uk-align-right"
-                          >Weekly Update</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="in-pricing-1">
-                  <div class="uk-card uk-card-default uk-box-shadow-medium">
-                    <div class="uk-card-media-top">
-                      <img
-                        class="uk-width-1-1 uk-align-center"
-                        src="../assets/img/in-profit-content-2.jpg"
-                        data-width
-                        data-height
-                        alt="sample-image"
-                      />
-                      <span></span>
-                    </div>
-                    <div class="uk-card-body">
-                      <div class="in-heading-extra in-card-decor-2">
-                        <h2 class="uk-margin-remove-bottom">Technical</h2>
-                        <p class="uk-text-lead">Analysis</p>
-                      </div>
-                      <p class="uk-margin-small-top">
-                        Access the financial markets with an account catered to
-                        your needs and benefit from good conditions.
-                      </p>
-                      <div class="uk-margin-medium-top">
-                        <a
-                          class="uk-button uk-button-link uk-text-uppercase uk-text-small"
-                          href="#"
-                          >Read analysis<i
-                            class="fas fa-caret-square-right uk-margin-small-left"
-                          ></i
-                        ></a>
-                        <span class="uk-label uk-border-pill uk-align-right"
-                          >Daily Update</span
-                        >
-                      </div>
-                    </div>
-                  </div>
+              <div class="uk-width-1-1">
+                <div
+                  class="uk-card uk-card-default uk-card-body in-profit-appcard"
+                >
+                  <v-data-table
+                    :headers="headers"
+                    :items="desserts"
+                    class="elevation-1"
+                  >
+                   <template v-slot:[`item.actions`]="{ item }">
+                    <v-chip
+                      :color="getColor(item.Bid)"
+                      dark
+                    >
+                      {{ item.Bid }}
+      </v-chip>
+    </template>
+                  </v-data-table>
                 </div>
               </div>
               <div class="uk-width-1-1">
@@ -340,7 +288,10 @@
                             >Download from<span>Play Store</span></span
                           >
                         </a>
-                        <a href="#" class="download-btn uk-button in-button-app">
+                        <a
+                          href="#"
+                          class="download-btn uk-button in-button-app"
+                        >
                           <i class="fab fa-apple fa-2x"></i>
                           <span class="wrapper"
                             >Download from<span>App Store</span></span
@@ -406,7 +357,7 @@
     </div>
     <!-- section content end -->
     <!-- section content begin -->
-          <!-- data-src="../../assets/img/in-section-profit-3.png" -->
+    <!-- data-src="../../assets/img/in-section-profit-3.png" -->
 
     <div
       class="home-banner uk-section uk-section-secondary uk-padding-large uk-background-contain uk-background-bottom-center in-padding-large-vertical@s in-profit-3"
@@ -645,8 +596,62 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      headers: [
+        {
+          text: "Symbol",
+          align: "start",
+          sortable: false,
+          value: "Symbol",
+        },
+        { text: "Bid", value: "Bid" , sortable: true},
+        { text: "Ask", value: "Ask", sortable: true },
+        { text: "Spread", value: "Spread", sortable: true },
+      ],
+      desserts: [
+        {
+          Symbol: "AUDNZD",
+          Bid: 1.0634132,
+          Ask: 1.06351,
+          Spread: 0.9,
+        },
+        {
+          Symbol: "AUDNZD",
+          Bid: 1,
+          Ask: 1,
+          Spread: 0.9,
+        },
+        {
+          Symbol: "AUDNZD",
+          Bid: 1.06341,
+          Ask: 1.06351,
+          Spread: 0.8,
+        },
+        {
+          Symbol: "AUDNZD",
+          Bid: 1.06341,
+          Ask: 1.06351,
+          Spread: 0.7,
+        },
+        {
+          Symbol: "AUDNZD",
+          Bid: 1.06341,
+          Ask: 1.06351,
+          Spread: 0.6,
+        },
+      ],
+    };
+  },
+  methods: {
+    getColor (Bid) {
+        if (Bid > 1) return 'red'
+        else if (Bid == 1) return 'orange'
+        else return 'green'
+      },
+  },
+};
 </script>
-
 <style>
 </style>

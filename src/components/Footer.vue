@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer v-if="$route.meta.footer">
     <!-- footer content begin -->
     <div
       class="uk-section uk-section-primary uk-padding-large uk-padding-remove-horizontal uk-margin-medium-top"

@@ -4,3 +4,22 @@
 .banner-top{
     background-image: url('../../assets/img/in-profit-decor-3.svg') !important;
 }
+.uk-navbar-dropdown-nav>li>a {
+    text-align: left;
+    padding-left: 15px;
+}
+.uk-position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.theme--light.v-data-table {
+    background-color: #f7f6fc!important;
+}
+.login-img {
+    background: url(../img/in-signin-image.jpg);
+    background-position: 100% 50%;
+}
