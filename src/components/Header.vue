@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- header content begin -->
-    <div class="uk-section uk-padding-small in-profit-ticker">
+        <div class="uk-section uk-padding-small in-profit-ticker">
       <div class="uk-container">
         <div class="uk-grid">
           <div class="uk-width-1-1">
@@ -84,9 +84,15 @@
                 ></router-link>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><router-link tag="a" to="/Home2">Homepage 2</router-link></li>
-                    <li><router-link tag="a" to="/Home3">Homepage 3</router-link></li>
-                    <li><router-link tag="a" to="/Home4">Homepage 4</router-link></li>
+                    <li>
+                      <router-link tag="a" to="/Home2">Homepage 2</router-link>
+                    </li>
+                    <li>
+                      <router-link tag="a" to="/Home3">Homepage 3</router-link>
+                    </li>
+                    <li>
+                      <router-link tag="a" to="/Home4">Homepage 4</router-link>
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -95,14 +101,24 @@
                 <a href="#">Company<i class="fas fa-chevron-down"></i></a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><router-link tag="a" to="/about">About</router-link></li>
-                    <li><router-link tag="a" to="/blog-list">Blog</router-link></li>
-                    <li><router-link tag="a" to="/careers">Careers</router-link></li>
-                    <li><router-link tag="a" to="/contact">Contact</router-link></li>
+                    <li>
+                      <router-link tag="a" to="/about">About</router-link>
+                    </li>
+                    <li>
+                      <router-link tag="a" to="/blog-list">Blog</router-link>
+                    </li>
+                    <li>
+                      <router-link tag="a" to="/careers">Careers</router-link>
+                    </li>
+                    <li>
+                      <router-link tag="a" to="/contact">Contact</router-link>
+                    </li>
                   </ul>
                 </div>
               </li>
-              <li><router-link tag="a" to="/education">Education</router-link></li>
+              <li>
+                <router-link tag="a" to="/education">Education</router-link>
+              </li>
               <li>
                 <a href="#">Resources<i class="fas fa-chevron-down"></i></a>
                 <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
@@ -119,11 +135,26 @@
                             ></i
                           ></a>
                         </li>
-                        <li><router-link tag="a" to="/help-center">Help Center</router-link></li>
-                        <li><router-link tag="a" to="/customers">Customers</router-link></li>
-                        <li><router-link tag="a" to="/roadmap">Roadmap</router-link></li>
-                        <li><router-link tag="a" to="/legal-docs">Legal Docs</router-link><i class="fas fa-gavel fa-sm"></i
-                          ></li>
+                        <li>
+                          <router-link tag="a" to="/help-center"
+                            >Help Center</router-link
+                          >
+                        </li>
+                        <li>
+                          <router-link tag="a" to="/customers"
+                            >Customers</router-link
+                          >
+                        </li>
+                        <li>
+                          <router-link tag="a" to="/roadmap"
+                            >Roadmap</router-link
+                          >
+                        </li>
+                        <li>
+                          <router-link tag="a" to="/legal-docs"
+                            >Legal Docs</router-link
+                          ><i class="fas fa-gavel fa-sm"></i>
+                        </li>
                       </ul>
                     </div>
                     <div>
@@ -143,8 +174,27 @@
             </ul>
             <div class="uk-navbar-item uk-visible@m in-optional-nav">
               <div>
-                <router-link tag="a" to="signin" class="uk-button uk-button-text">Login</router-link>
-                <router-link tag="a" to="signup" class="uk-button uk-button-text">Register</router-link>
+                <router-link
+                 
+                  tag="a"
+                  to="signin"
+                  class="uk-button uk-button-text"
+                  >Login</router-link
+                >
+                <router-link
+                 
+                  tag="a"
+                  to="signup"
+                  class="uk-button uk-button-text"
+                  >Register</router-link
+                >
+                <router-link
+                  tag="a"
+                  to="signin"
+                  @click="logOut"
+                  class="uk-button uk-button-text"
+                  >Log out</router-link
+                >
               </div>
             </div>
           </div>
@@ -153,12 +203,34 @@
       <!-- module navigation end -->
     </div>
     <!-- header content end -->
+ 
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      logOut() {
+        this.CallAPI(
+          "delete",
+          "logout",
+          {},
+          (response) => {
+            console.log(response);
+            localStorage.clear();
+          },
+          (error) => {
+            console.log("error", error);
+          }
+        );
+      },
+    };
+  },
+  methods: {},
+};
 </script>
 
 <style>
+  
 </style>

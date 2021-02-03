@@ -153,6 +153,7 @@ export default {
           let token = response.data.data.token;
           localStorage.setItem("token", token);
           this.$toast.success("Đăng nhập thành công!");
+          this.$route.push("/");
         },
         (error) => {
           let errors = error.data.error;

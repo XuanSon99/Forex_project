@@ -29,6 +29,10 @@ Vue.prototype.$headers = {
     "Authorization": localStorage.getItem("token"),
   },
 };
+Vue.prototype.$checkLogin = false;
+if(localStorage.getItem("token")) {
+  Vue.prototype.$checkLogin = true;
+}
 Vue.prototype.CallAPI = function (method, url, data, callResponse, callError) {
   switch (method) {
     case "post":
