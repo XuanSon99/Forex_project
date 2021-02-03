@@ -9,30 +9,30 @@
                 <div class="uk-width-1-2@m">
                   <div class="uk-overlay">
                     <h1>
-                      Get more <span class="in-highlight">freedom</span> in the
-                      markets.
+                      <!-- Get more <span class="in-highlight">freedom</span> in the
+                      markets. -->
+                      JSC MARKETS - First-Class STP Broker.
                     </h1>
                     <p class="uk-text-lead uk-visible@m">
-                      Trade Cryptocurrencies, Stock Indices, Commodities and
-                      Forex from a single account
+                      JSC Markets was founded by a group of experienced business executives from the forex, finance, commercial and compliance sectors who were determined to offer a fairer way to trade forex.
                     </p>
                     <div class="in-slideshow-button">
                       <a
                         href="#"
                         class="uk-button uk-button-primary uk-border-rounded"
-                        >Open account</a
+                        >Register</a
                       >
                       <a
                         href="#"
                         class="uk-button uk-button-default uk-border-rounded uk-margin-small-left uk-visible@m"
-                        >Discover account</a
+                        >Details</a
                       >
                     </div>
-                    <p class="uk-text-small">
+                    <!-- <p class="uk-text-small">
                       <span class="uk-text-primary">*</span>Trading in Forex/
                       CFDs is highly speculative and carries a high level of
                       risk.
-                    </p>
+                    </p> -->
                   </div>
                 </div>
                 <div class="uk-position-center">
@@ -115,7 +115,7 @@
                     ></i>
                   </div>
                   <div>
-                    <p class="uk-text-bold uk-margin-remove">Enhanced Tools</p>
+                    <p class="uk-text-bold uk-margin-remove">Fast order Execution</p>
                   </div>
                 </div>
                 <div class="uk-flex uk-flex-middle">
@@ -125,7 +125,7 @@
                     ></i>
                   </div>
                   <div>
-                    <p class="uk-text-bold uk-margin-remove">Trading Guides</p>
+                    <p class="uk-text-bold uk-margin-remove">Tight spread</p>
                   </div>
                 </div>
                 <div class="uk-flex uk-flex-middle">
@@ -135,7 +135,7 @@
                     ></i>
                   </div>
                   <div>
-                    <p class="uk-text-bold uk-margin-remove">Fast execution</p>
+                    <p class="uk-text-bold uk-margin-remove">Advanced tools</p>
                   </div>
                 </div>
                 <div class="uk-flex uk-flex-middle">
@@ -145,7 +145,7 @@
                     ></i>
                   </div>
                   <div>
-                    <p class="uk-text-bold uk-margin-remove">0% Commission</p>
+                    <p class="uk-text-bold uk-margin-remove">Bonus deposit</p>
                   </div>
                 </div>
               </div>
@@ -162,12 +162,12 @@
       <div class="uk-container">
         <div class="uk-grid-divider" data-uk-grid>
           <div class="uk-width-expand@m in-margin-top-20@s">
-            <h2>Why Profit Inc is a trusted FX broker</h2>
-            <p>
+            <h2>Why JSC MARKETS GREAT TRADING CONDITION AND BEST SERVICE</h2>
+            <!-- <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur sunt in anim culpa qui
               officia.
-            </p>
+            </p> -->
           </div>
           <div class="uk-width-2-3@m">
             <div class="uk-child-width-1-2@s uk-child-width-1-2@m" data-uk-grid>
@@ -181,7 +181,7 @@
                   />
                 </div>
                 <div>
-                  <p class="uk-text-bold">Wide Range of Trading Instruments</p>
+                  <p class="uk-text-bold">Tight, competitive spreads</p>
                 </div>
               </div>
               <div class="uk-flex uk-flex-middle">
@@ -194,7 +194,7 @@
                   />
                 </div>
                 <div>
-                  <p class="uk-text-bold">Unparalleled Trading Conditions</p>
+                  <p class="uk-text-bold">Fast and efficient executions</p>
                 </div>
               </div>
               <div class="uk-flex uk-flex-middle">
@@ -207,7 +207,7 @@
                   />
                 </div>
                 <div>
-                  <p class="uk-text-bold">Globally Licensed &amp; Regulated</p>
+                  <p class="uk-text-bold">Quick deposits and withdrawals</p>
                 </div>
               </div>
               <div class="uk-flex uk-flex-middle">
@@ -220,7 +220,7 @@
                   />
                 </div>
                 <div>
-                  <p class="uk-text-bold">Committed to Forex Education</p>
+                  <p class="uk-text-bold">Best customer service</p>
                 </div>
               </div>
             </div>

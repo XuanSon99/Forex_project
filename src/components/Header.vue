@@ -78,7 +78,7 @@
           </div>
           <div class="uk-navbar-right uk-width-expand uk-flex uk-flex-right">
             <ul class="uk-navbar-nav uk-visible@m">
-              <li>
+              <!-- <li>
                 <router-link tag="a" class="uk-logo" to="/">
                   Home<i class="fas fa-chevron-down"></i
                 ></router-link>
@@ -89,64 +89,78 @@
                     <li><router-link tag="a" to="/Home4">Homepage 4</router-link></li>
                   </ul>
                 </div>
-              </li>
-              <li><router-link tag="a" to="/markets">Markets</router-link></li>
+              </li> -->
               <li>
-                <a href="#">Company<i class="fas fa-chevron-down"></i></a>
+                <a href="#">About us<i class="fas fa-chevron-down"></i></a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><router-link tag="a" to="/about">About</router-link></li>
-                    <li><router-link tag="a" to="/blog-list">Blog</router-link></li>
-                    <li><router-link tag="a" to="/careers">Careers</router-link></li>
-                    <li><router-link tag="a" to="/contact">Contact</router-link></li>
+                    <li><router-link tag="a" to="/about">About JSC Markets</router-link></li>
+                    <li><router-link tag="a" to="/blog-list">Advantages of JSC Markets</router-link></li>
                   </ul>
                 </div>
               </li>
-              <li><router-link tag="a" to="/education">Education</router-link></li>
               <li>
-                <a href="#">Resources<i class="fas fa-chevron-down"></i></a>
-                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
-                  <div
-                    class="uk-navbar-dropdown-grid uk-child-width-1-2"
-                    data-uk-grid
-                  >
-                    <div>
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li>
-                          <a href="https://getuikit.com/docs/"
-                            >Documentation<i
-                              class="fas fa-external-link-square-alt fa-sm"
-                            ></i
-                          ></a>
-                        </li>
-                        <li><router-link tag="a" to="/help-center">Help Center</router-link></li>
-                        <li><router-link tag="a" to="/customers">Customers</router-link></li>
-                        <li><router-link tag="a" to="/roadmap">Roadmap</router-link></li>
-                        <li><router-link tag="a" to="/legal-docs">Legal Docs</router-link><i class="fas fa-gavel fa-sm"></i
-                          ></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li>
-                          <a class="uk-disabled" href="#"
-                            >Adipiscing elit sed do eiusmod incididunt ut labore
-                            dolore magna lorem ipsum sit dolor amet
-                            consectetur</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                <a href="#">Trading<i class="fas fa-chevron-down"></i></a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><router-link tag="a" to="/about">Accounts</router-link></li>
+                    <li><router-link tag="a" to="/blog-list">Conditions</router-link></li>
+                    <li><router-link tag="a" to="/about">Liquidity</router-link></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <router-link tag="a" to="/markets">Markets<i class="fas fa-chevron-down"></i></router-link>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><router-link tag="a" to="/">Forex</router-link></li>
+                    <li><router-link tag="a" to="/">Commodities</router-link></li>
+                    <li><router-link tag="a" to="/">Indices</router-link></li>
+                    <li><router-link tag="a" to="/">Bonds</router-link></li>
+                    <li><router-link tag="a" to="/">Crypto currency</router-link></li>
+                    <li><router-link tag="a" to="/">Stocks</router-link></li>
+                    <li><router-link tag="a" to="/">Futures</router-link></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <router-link tag="a" to="/Platform">Platform<i class="fas fa-chevron-down"></i></router-link>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><router-link tag="a" to="/">MT4 Destop</router-link></li>
+                    <li><router-link tag="a" to="/">MT4 Web Terminal</router-link></li>
+                    <li><router-link tag="a" to="/">MT4 Iphone/Ipad</router-link></li>
+                    <li><router-link tag="a" to="/">MT4 Androi</router-link></li>
+                    <li><router-link tag="a" to="/">PAMM</router-link></li>
+                    <li><router-link tag="a" to="/">MAM</router-link></li>
+                    <li><router-link tag="a" to="/">Copy Trade</router-link></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">Partnership<i class="fas fa-chevron-down"></i></a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><router-link tag="a" to="/about">IB & affiliate program</router-link></li>
+                    <li><router-link tag="a" to="/blog-list">Advantages when become IB of JSC Markets</router-link></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">Support central<i class="fas fa-chevron-down"></i></a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><router-link tag="a" to="/help-center">FAQ</router-link></li>
+                  </ul>
                 </div>
               </li>
             </ul>
-            <div class="uk-navbar-item uk-visible@m in-optional-nav">
+            <!-- <div class="uk-navbar-item uk-visible@m in-optional-nav">
               <div>
                 <router-link tag="a" to="signin" class="uk-button uk-button-text">Login</router-link>
                 <a href="#" class="uk-button uk-button-text">Sign up</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </nav>
