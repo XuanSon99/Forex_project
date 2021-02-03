@@ -7,18 +7,21 @@
           <div class="uk-width-1-1 uk-flex uk-flex-center">
             <div class="uk-width-3-5@m uk-text-center">
               <h1 class="uk-margin-small-bottom">
-                Advantages of<br /><span class="in-highlight"
-                  >JSC Markets</span
-                >
+                <span class="in-highlight">JSC Markets</span> - First-Class STP
+                Broker
               </h1>
               <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
-                For more than 30 years, we’ve been empowering clients by helping
-                them take control of their financial lives.
+                JSC Markets was founded by a group of experienced business
+                executives from the forex, finance, commercial and compliance sectors.
+                <!-- sectors who were determined to offer a fairer way to trade
+                forex. The company is based in Saint Vincent and The Grenadines
+                with the business number No.786 LLC 2021. -->
               </p>
             </div>
           </div>
           <div
             class="uk-grid uk-grid-large uk-child-width-1-3@m uk-margin-medium-top"
+            style="text-align: left"
             data-uk-grid
           >
             <div class="uk-flex uk-flex-left">
@@ -28,11 +31,13 @@
                 ></i>
               </div>
               <div>
-                <h3>Philosophy</h3>
+                <h3>Our Core Values</h3>
                 <p>
-                  At vero eos etme accusamus iusto odio ent dignissimos deleniti
-                  atque corrupti quos ducimus moll quilla blanditiis expedita
-                  est distinctio.
+                  Tight, competitive spreads <br />
+                  Fast and efficient executions <br />
+                  Quick deposits and withdrawals <br />
+                  No trading against you <br />
+                  Best customer service
                 </p>
               </div>
             </div>
@@ -43,11 +48,12 @@
                 ></i>
               </div>
               <div>
-                <h3>History</h3>
+                <h3>Our Goal</h3>
                 <p>
-                  At vero eos etme accusamus iusto odio ent dignissimos deleniti
-                  atque corrupti quos ducimus moll quilla blanditiis expedita
-                  est distinctio.
+                  Our goal is to preserve our clients’ interests at all times by
+                  offering zero conflict of interest, full execution
+                  transparency, full post trade transparency and trade
+                  anonymity.
                 </p>
               </div>
             </div>
@@ -58,11 +64,11 @@
                 ></i>
               </div>
               <div>
-                <h3>Culture</h3>
+                <h3>Our Client</h3>
                 <p>
-                  At vero eos etme accusamus iusto odio ent dignissimos deleniti
-                  atque corrupti quos ducimus moll quilla blanditiis expedita
-                  est distinctio.
+                  Our client care never stops, and we ensure you are given every
+                  opportunity to maximise your profit making potential at JSC
+                  Markets.
                 </p>
               </div>
             </div>
@@ -72,7 +78,7 @@
     </div>
     <!-- section content end -->
     <!-- section content begin -->
-    <div class="uk-section in-offset-top-40 in-offset-bottom-20">
+    <!-- <div class="uk-section in-offset-top-40 in-offset-bottom-20">
       <div class="uk-container">
         <div class="uk-grid">
           <div class="uk-width-1-1">
@@ -242,10 +248,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- section content end -->
     <!-- section content begin -->
-    <div class="uk-section">
+    <!-- <div class="uk-section">
       <div class="uk-container">
         <div class="uk-grid uk-flex uk-flex-center">
           <div class="uk-width-3-4@m">
@@ -300,7 +306,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- section content end -->
   </div>
 </template>
