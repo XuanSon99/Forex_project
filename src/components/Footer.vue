@@ -15,7 +15,7 @@
               <li><a href="#">Terms of Business</a></li>
               <li><a href="#">Risk Statement</a></li>
               <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Preventing Money Laundering</a></li>
+              <li><router-link tag="a" to="/preventing-money-laundering">Preventing Money Laundering</router-link></li>
             </ul>
           </div>
           <div></div>

@@ -18,6 +18,9 @@ import LegalDocs from '../views/Legal-docs.vue'
 import Home2 from '../views/Home-2.vue'
 import Home3 from '../views/Home-3.vue'
 import Home4 from '../views/Home-4.vue'
+import Content from'../components/Content'
+
+
 var isAuthenticated = false;
 if (localStorage.getItem('token')) isAuthenticated = true;
 Vue.use(VueRouter)
@@ -27,6 +30,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/preventing-money-laundering',
+    name: 'Content',
+    component: Content
   },
   {
     path: '/markets',
