@@ -5,8 +5,7 @@
       <div class="uk-container uk-container-expand">
         <div class="uk-grid" data-uk-height-viewport="expand: true">
           <div
-            class="uk-width-3-5@m uk-background-cover uk-background-center-right uk-visible@m uk-box-shadow-xlarge"
-            style="background-image: url(img/in-signin-image.jpg)"
+            class="uk-width-3-5@m uk-background-cover uk-background-center-right uk-visible@m uk-box-shadow-xlarge login-img"
           ></div>
           <div class="uk-width-expand@m uk-flex uk-flex-middle">
             <div class="uk-grid uk-flex-center">
@@ -153,7 +152,6 @@ export default {
           let token = response.data.data.token;
           localStorage.setItem("token", token);
           this.$toast.success("Đăng nhập thành công!");
-          this.$route.push("/");
         },
         (error) => {
           let errors = error.data.error;
@@ -167,8 +165,10 @@ export default {
               this.error = "Mật khẩu chưa chính xác.";
             }
           }
+          return ;
         }
       );
+     
     },
     validEmail: function (email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

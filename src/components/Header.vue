@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header v-if="$route.meta.header">
     <!-- header content begin -->
     <div class="uk-section uk-padding-remove-vertical">
       <!-- module navigation begin -->
@@ -30,68 +30,55 @@
                 >
               </li>
               <li>
-                <div class="uk-navbar-item uk-visible@m in-optional-nav">
+                <div class="uk-navbar-item uk-visible@m">
                   <div>
                     <router-link
-                      tag="a"
+                      tag="button"
                       to="/signin"
-                      class="uk-button uk-button-text button-fixed"
+                      class="btn btn-outline-success"
                       ><i class="fas fa-key icon-fixed"></i> Login</router-link
                     >
                   </div>
                 </div>
               </li>
               <li>
-                <router-link tag="a" to="/Platform"
-                  >Platform<i class="fas fa-chevron-down"></i
-                ></router-link>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li>
-                      <router-link tag="a" to="/">MT4 Destop</router-link>
-                    </li>
-                    <li>
-                      <router-link tag="a" to="/">MT4 Web Terminal</router-link>
-                    </li>
-                    <li>
-                      <router-link tag="a" to="/">MT4 Iphone/Ipad</router-link>
-                    </li>
-                    <li>
-                      <router-link tag="a" to="/">MT4 Androi</router-link>
-                    </li>
-                    <li><router-link tag="a" to="/">PAMM</router-link></li>
-                    <li><router-link tag="a" to="/">MAM</router-link></li>
-                    <li>
-                      <router-link tag="a" to="/">Copy Trade</router-link>
-                    </li>
-                  </ul>
+                <div class="uk-navbar-item uk-visible@m">
+                  <div>
+                    <router-link
+                      tag="button"
+                      to="/"
+                      class="btn btn-outline-danger"
+                      ><i class="fas fa-heart icon-fixed"></i>Live Account</router-link
+                    >
+                  </div>
                 </div>
               </li>
               <li>
-                <a href="#">Partnership<i class="fas fa-chevron-down"></i></a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li>
-                      <router-link tag="a" to="/about"
-                        >IB & affiliate program</router-link
-                      >
-                    </li>
-                    <li>
-                      <router-link tag="a" to="/blog-list"
-                        >Advantages when become IB of JSC Markets</router-link
-                      >
-                    </li>
-                  </ul>
+                <div class="uk-navbar-item uk-visible@m">
+                  <div>
+                    <router-link
+                      tag="button"
+                      to="/"
+                      class="btn btn-outline-primary"
+                      ><i class="fas fa-sign-out-alt icon-fixed"></i>Log out</router-link
+                    >
+                  </div>
                 </div>
               </li>
               <li>
                 <a href="#"
-                  >Support central<i class="fas fa-chevron-down"></i
+                  ><i class="fas fa-language icon-fixed"></i>EN<i class="fas fa-chevron-down"></i
                 ></a>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
                     <li>
-                      <router-link tag="a" to="/help-center">FAQ</router-link>
+                      <router-link tag="a" to="/help-center"><i class="fas fa-globe-asia icon-fixed"></i>VietNam</router-link>
+                    </li>
+                      <li>
+                      <router-link tag="a" to="/help-center"><i class="fas fa-globe-asia icon-fixed"></i>England</router-link>
+                    </li>
+                      <li>
+                      <router-link tag="a" to="/help-center"><i class="fas fa-globe-asia icon-fixed"></i>Japanese</router-link>
                     </li>
                   </ul>
                 </div>
@@ -373,19 +360,5 @@ export default {
 }
 .button-fixed {
   border-right: none !important;
-  margin: 0;
-  border: none;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: none!important;
-  border-radius: 0;
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0 30px;
-  vertical-align: middle;
-  font-size: 16px!important;
-  line-height: 38px!important;
-  text-align: center;
-  text-decoration: none;
 }
 </style>
