@@ -26,15 +26,28 @@
                   </a>
                   <!-- module logo begin -->
                   <p class="uk-text-lead uk-margin-top uk-margin-remove-bottom">
-                    Log into your account
+                    Register an account
                   </p>
                   <p
                     class="uk-text-small uk-margin-remove-top uk-margin-medium-bottom"
                   >
-                    Don't have an account? <router-link to="signup" >Register here</router-link>
+                    Have an account? <router-link to="signin">Login here</router-link>
                   </p>
                   <!-- login form begin -->
                   <form class="uk-grid uk-form">
+                     <div class="uk-margin-small uk-width-1-1 uk-inline">
+                      <span
+                        class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"
+                      ></span>
+                      <input
+                        class="uk-input uk-border-rounded"
+                        id="display_name"
+                        value=""
+                        v-model="display_name"
+                        type="text"
+                        placeholder="Display name"
+                      />
+                    </div>
                     <div class="uk-margin-small uk-width-1-1 uk-inline">
                       <span
                         class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"
@@ -48,6 +61,7 @@
                         placeholder="Username"
                       />
                     </div>
+                    
                     <div class="uk-margin-small uk-width-1-1 uk-inline">
                       <span
                         class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"
@@ -61,54 +75,36 @@
                         placeholder="Password"
                       />
                     </div>
+                     <div class="uk-margin-small uk-width-1-1 uk-inline">
+                      <span
+                        class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"
+                      ></span>
+                      <input
+                        class="uk-input uk-border-rounded"
+                        id="confirm_password"
+                        v-model="confirm_password"
+                        value=""
+                        type="password"
+                        placeholder="Confirm password"
+                      />
+                    </div>
                     <div class="uk-margin-small uk-width-1-1 uk-inline">
                       <p class="text-danger text-left">{{ error }}</p>
                     </div>
-                    <div class="uk-margin-small uk-width-auto uk-text-small">
-                      <label
-                        ><input
-                          class="uk-checkbox uk-border-rounded"
-                          type="checkbox"
-                        />
-                        Remember me</label
-                      >
-                    </div>
-                    <div class="uk-margin-small uk-width-expand uk-text-small">
-                      <label class="uk-align-right"
-                        ><a class="uk-link-reset" href="#"
-                          >Forgot password?</a
-                        ></label
-                      >
-                    </div>
+                   
                     <div class="uk-margin-small uk-width-1-1">
                       <button
                         class="uk-button uk-width-1-1 uk-button-primary uk-border-rounded uk-float-left"
                         type="submit"
                         name="submit"
-                        @click="login"
+                        @click="register"
                       >
-                        Sign in
+                        Sign up
                       </button>
                     </div>
                   </form>
                   <!-- login form end -->
-                  <p class="uk-heading-line uk-text-center">
-                    <span>Or sign in with</span>
-                  </p>
-                  <div class="uk-margin-medium-bottom uk-text-center">
-                    <a
-                      class="uk-button uk-button-small uk-border-rounded in-brand-google"
-                      href="#"
-                      ><i class="fab fa-google uk-margin-small-right"></i
-                      >Google</a
-                    >
-                    <a
-                      class="uk-button uk-button-small uk-border-rounded in-brand-facebook"
-                      href="#"
-                      ><i class="fab fa-facebook-f uk-margin-small-right"></i
-                      >Facebook</a
-                    >
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -124,16 +120,18 @@
 export default {
   data() {
     return {
+      display_name: "",
       username: "",
+      confirm_password: "",
       password: "",
       error: "",
     };
   },
   methods: {
-    login(e) {
+    register(e) {
       e.preventDefault();
       this.error = "";
-      if (!this.username || !this.password) {
+      if (!this.username || !this.password || !this.confirm_password) {
         this.error = "Vui lòng diền đầy đủ thông tin.";
         return;
       }
@@ -142,28 +140,31 @@ export default {
         return ;
       }
       let data = {
+        display_name: this.display_name,
         username: this.username,
         password: this.password,
+        confirm_password: this.confirm_password
       };
       this.CallAPI(
         "post",
-        "login",
+        "register",
         data,
         (response) => {
-          let token = response.data.data.token;
-          localStorage.setItem("token", token);
-          this.$toast.success("Đăng nhập thành công!");
+          if(response.data.status === true) {
+           this.$toast.success("Đăng ký thành công!");
+            this.$router.push({name: 'Signin'});
+          }
         },
         (error) => {
           let errors = error.data.error;
           if(typeof errors != "undefined") {
-            if(errors.username === "The username is not exist.") {
-              this.error = "Tài khoản không tồn tại.";
+            if(errors.username === "username is already exist.") {
+              this.error = "Tài khoản đã tồn tại.";
             }
           }
           if(typeof errors != "undefined") {
-            if(errors.password === "The password is wrong.") {
-              this.error = "Mật khẩu chưa chính xác.";
+            if(errors.password === "password and confirm password must be match.") {
+              this.error = "Mật khẩu và xác nhận không trùng khớp.";
             }
           }
         }
