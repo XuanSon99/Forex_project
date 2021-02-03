@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Markets from '../views/Markets.vue'
 import Roadmap from '../views/Roadmap.vue'
 import Signin from '../views/Signin.vue'
+import Signup from '../views/Signup.vue'
 import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
 import Careers from '../views/Careers.vue'
@@ -106,6 +107,11 @@ const routes = [
     name: 'LegalDocs',
     component: LegalDocs
   },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Signup
+  }
 ]
 
 const router = new VueRouter({

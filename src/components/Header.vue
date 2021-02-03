@@ -144,7 +144,7 @@
             <div class="uk-navbar-item uk-visible@m in-optional-nav">
               <div>
                 <router-link tag="a" to="signin" class="uk-button uk-button-text">Login</router-link>
-                <a href="#" class="uk-button uk-button-text">Sign up</a>
+                <router-link tag="a" to="signup" class="uk-button uk-button-text">Register</router-link>
               </div>
             </div>
           </div>

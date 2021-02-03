@@ -7,8 +7,8 @@
           <div class="uk-width-1-1 uk-flex uk-flex-center">
             <div class="uk-width-3-5@m uk-text-center">
               <h1 class="uk-margin-small-bottom">
-                Putting our clients first<br /><span class="in-highlight"
-                  >since 1986</span
+                Advantages of<br /><span class="in-highlight"
+                  >JSC Markets</span
                 >
               </h1>
               <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
