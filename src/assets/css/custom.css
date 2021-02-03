@@ -4,14 +4,3 @@
 .banner-top{
     background-image: url('../../assets/img/in-profit-decor-3.svg') !important;
 }
-.download-btn{
-    padding: 10px !important;
-    border-radius: 10px !important;
-    color: #fff !important;
-}
-.download-btn:hover{
-    color: #000 !important;
-}
-.in-slideshow .in-slideshow-feature .in-icon-wrap {
-    padding-top: 13px !important;
-}
