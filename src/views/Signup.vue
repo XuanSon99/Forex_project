@@ -150,8 +150,10 @@ export default {
         "register",
         data,
         (response) => {
-          this.$toast.success("Đăng ký thành công!");
-          this.$router.push({name: 'Signin'});
+          if(response.data.status === true) {
+           this.$toast.success("Đăng ký thành công!");
+            this.$router.push({name: 'Signin'});
+          }
         },
         (error) => {
           let errors = error.data.error;
