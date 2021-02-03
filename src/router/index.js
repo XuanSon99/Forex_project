@@ -18,7 +18,8 @@ import LegalDocs from '../views/Legal-docs.vue'
 import Home2 from '../views/Home-2.vue'
 import Home3 from '../views/Home-3.vue'
 import Home4 from '../views/Home-4.vue'
-
+var isAuthenticated = false;
+if (localStorage.getItem('token')) isAuthenticated = true;
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,7 +41,13 @@ const routes = [
   {
     path: '/Signin',
     name: 'Signin',
-    component: Signin
+    component: Signin,
+    beforeEnter: (to, from, next) => {
+      if (to.name == 'Signin' && isAuthenticated) { 
+        next({ name: 'Home' })
+      }
+      next()
+    },
   },
   {
     path: '/Contact',
@@ -109,8 +116,14 @@ const routes = [
   },
   {
     path: '/signup',
-    name: 'signup',
-    component: Signup
+    name: 'Signup',
+    component: Signup,
+    beforeEnter: (to, from, next) => {
+      if (to.name == 'Signup' && isAuthenticated) { 
+        next({ name: 'Home' })
+      }
+      next()
+    },
   }
 ]
 
@@ -119,5 +132,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+router.beforeEach((to, from, next) => {
+  if ( to.name != 'Signin' && !isAuthenticated) next({ name: 'Signin' })
+  next()
+})
 export default router
